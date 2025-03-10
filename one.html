@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #ffccff;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #birthdayImage {
+            width: 80%;
+            max-width: 300px;
+            display: none;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        #message {
+            font-size: 5vw;
+            color: #d63384;
+            font-weight: bold;
+            display: none;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            font-size: 4vw;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        @media (min-width: 768px) {
+            #message {
+                font-size: 24px;
+            }
+            button {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 6vw;">Tap to Reveal Your Birthday Surprise Boku! 🎉</h1>
+    <button onclick="playSurprise()">Click Me</button>
+    <img id="birthdayImage" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmZoOXU1NXBxODRoZGN3MGRibDJoYXBxMTc1ZGpxM2xtYTMwY3V6YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wGKrkvHxZT6PVpw635/giphy.gif" alt="Birthday Image">
+    <p id="message">Happy Birthday, my love Kalyani! 💖 Wishing you all the happiness in the world!</p>
+    <audio id="birthdaySong" src="./assets/happy-birthday-background-music-298561.mp3"></audio>
+
+    <script>
+        function playSurprise() {
+            document.getElementById('birthdayImage').style.display = 'block';
+            document.getElementById('message').style.display = 'block';
+            document.getElementById('birthdaySong').play();
+        }
+    </script>
+</body>
+</html>
